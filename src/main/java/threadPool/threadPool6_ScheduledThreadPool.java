@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+//创建一个支持定时及周期性的任务执行的线程池，多数情况下可用来替代Timer类。
 public class threadPool6_ScheduledThreadPool {
 	public static void main(String args[]) throws InterruptedException, ExecutionException {
 
