@@ -1,4 +1,4 @@
-package threadDemo;
+package threadPool;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
