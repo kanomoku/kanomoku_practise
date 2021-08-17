@@ -17,7 +17,7 @@ public class SubmitAndExcute3_SubmitWithResult_MainTest {
 
         // 创建10个任务并执行
         for (int i = 0; i < 10; i++) {
-            System.out.println("添加了第" + i + "个线程");
+            System.out.println("添加了第" + i + "个线程任务");
             // 使用ExecutorService执行Callable类型的任务，并将结果保存在future变量中
             Future<String> future = executorService.submit(new SubmitAndExcute2_TaskWithResult(i));
             // 将任务执行结果存储到List中
