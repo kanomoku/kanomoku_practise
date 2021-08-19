@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * https://blog.csdn.net/yangliangliang2011/article/details/88640653
  */
-public class ArrayList_Cycle_Remove {
+public class ArrayList_Loop_Remove {
 
-	public ArrayList_Cycle_Remove() {
+	public ArrayList_Loop_Remove() {
 	}
 
 	public static void main(String[] args) {

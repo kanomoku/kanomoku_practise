@@ -9,7 +9,7 @@ import org.junit.Test;
 /**
  * https://blog.csdn.net/yangliangliang2011/article/details/88640653
  */
-public class ArrayList_Cycle {
+public class ArrayList_Loop {
 
 	// 1.fori循环遍历
 	// 效率最高 也是java官方推荐的用法

@@ -9,7 +9,7 @@ import org.junit.Test;
 /**
  * https://blog.csdn.net/yangliangliang2011/article/details/88640653
  */
-public class Set_Cycle {
+public class Set_Loop {
 
 	@Test()
 	public void iteratorTest() {

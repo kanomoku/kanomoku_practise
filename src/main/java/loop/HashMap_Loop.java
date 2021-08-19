@@ -8,7 +8,7 @@ import java.util.Map;
  * https://blog.csdn.net/yangliangliang2011/article/details/88641600
  * https://mp.weixin.qq.com/s/zQBN3UvJDhRTKP6SzcZFKw
  */
-public class HashMap_Cycle {
+public class HashMap_Loop {
 	public static void main(String[] args) {
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 		int n = 1000_0000;
@@ -107,7 +107,7 @@ public class HashMap_Cycle {
 		System.out.println("map.values().iterator() time=\t" + (after7 - before7));
 	}
 
-	public HashMap_Cycle() {
+	public HashMap_Loop() {
 	}
 
 }

@@ -1,8 +1,8 @@
 package loop;
 
-public class HashSet_Cycle {
+public class HashSet_Loop {
 
-	public HashSet_Cycle() {
+	public HashSet_Loop() {
 		// TODO Auto-generated constructor stub
 	}
 

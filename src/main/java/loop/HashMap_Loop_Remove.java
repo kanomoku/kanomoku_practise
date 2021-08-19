@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
-public class HashMap_Cycle_Remove {
+public class HashMap_Loop_Remove {
 	@Test()
 	public void entrySet() {
 		Map<Integer, String> map = new HashMap();
