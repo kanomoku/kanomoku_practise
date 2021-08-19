@@ -1,6 +1,6 @@
 package string;
 
-public class StringDemo {
+public class String_Demo {
 
 
     /**
@@ -158,7 +158,7 @@ public class StringDemo {
 
 
     public static void main(String[] args) {
-        StringDemo testStringDemo = new StringDemo();
+        String_Demo testStringDemo = new String_Demo();
         String[] ss = {"asd", "abcdefghigklmon", "dsafsadf"};
         System.out.println(testStringDemo.findNumber("asdf22ss33s"));
 //        System.out.println(testStringDemo.findNumber("abc def2  gh3i "));
