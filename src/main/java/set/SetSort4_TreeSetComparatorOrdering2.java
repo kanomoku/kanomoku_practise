@@ -24,13 +24,14 @@ public class SetSort4_TreeSetComparatorOrdering2{
                 return (int) (o1.getScore() - o2.getScore());
             }
         });
+        //方式1
 //        affectedWsSet.addAll(arrayList);
         
+        //方式2
         affectedWsSet.add(new Student2("A", 100));
         affectedWsSet.add(new Student2("B", 95));
         affectedWsSet.add(new Student2("C", 66));
         affectedWsSet.add(new Student2("D", 88));
-        
         
         System.out.println(affectedWsSet);
 
