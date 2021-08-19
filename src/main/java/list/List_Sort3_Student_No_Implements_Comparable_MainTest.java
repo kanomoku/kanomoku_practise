@@ -53,26 +53,28 @@ public class List_Sort3_Student_No_Implements_Comparable_MainTest {
 //		System.out.println("排序之后的list：");
 //		studentList.stream().forEach(System.out::println);
 
-		// 只按照姓名排序方式一：
-		Collections.sort(studentList, (e1, e2) -> e1.getName().compareTo(e2.getName()));
-		// 只按照姓名排序方式二：
-		Collections.sort(studentList, Comparator.comparing(Student_No_Implements_Comparable::getName));
-		// 只按照姓名排序方式三：
-		Collections.sort(studentList, Comparator.comparing(e -> e.getName()));
+//		// 只按照姓名排序方式一：
+//		Collections.sort(studentList, (e1, e2) -> e1.getName().compareTo(e2.getName()));
+//		// 只按照姓名排序方式二：
+//		Collections.sort(studentList, Comparator.comparing(Student_No_Implements_Comparable::getName));
+//		// 只按照姓名排序方式三：
+//		Collections.sort(studentList, Comparator.comparing(e -> e.getName()));
+//		
+//		// 只按照姓名排序方式四：
+//		studentList.sort((e1, e2) -> e1.getName().compareTo(e2.getName()));
+//		// 只按照姓名排序方式五：
+//		studentList.sort(Comparator.comparing(Student_No_Implements_Comparable::getName));
+//		// 只按照姓名排序方式六：
+//		studentList.sort(Comparator.comparing(e -> e.getName()));
+//
+//		// 只按照年龄排序方式一：
+//		Collections.sort(studentList, (e1, e2) -> e1.getAge().compareTo(e2.getAge()));
+//		// 只按照年龄排序方式二：
+//		Collections.sort(studentList, Comparator.comparingInt(Student_No_Implements_Comparable::getAge));
+//		System.out.println("只按照年龄排序之后的list：");
+//		studentList.stream().forEach(System.out::println);
 		
-		// 只按照姓名排序方式四：
-		studentList.sort((e1, e2) -> e1.getName().compareTo(e2.getName()));
-		// 只按照姓名排序方式五：
-		studentList.sort(Comparator.comparing(Student_No_Implements_Comparable::getName));
-		// 只按照姓名排序方式六：
-		studentList.sort(Comparator.comparing(e -> e.getName()));
-
-		// 只按照年龄排序方式一：
-		Collections.sort(studentList, (e1, e2) -> e1.getAge().compareTo(e2.getAge()));
-		// 只按照年龄排序方式二：
-		Collections.sort(studentList, Comparator.comparingInt(Student_No_Implements_Comparable::getAge));
-		System.out.println("只按照年龄排序之后的list：");
-		studentList.stream().forEach(System.out::println);
+		studentList.stream().sorted(Comparator.comparingInt(Student_No_Implements_Comparable::getAge)).forEach(System.out::println);;
 
 	}
 }
