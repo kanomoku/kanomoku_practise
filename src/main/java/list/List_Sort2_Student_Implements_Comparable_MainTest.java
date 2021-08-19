@@ -17,49 +17,72 @@ public class List_Sort2_Student_Implements_Comparable_MainTest {
 		studentImplementsComparableList.add(new Student_Implements_Comparable(21, 99, "赵七"));
 		System.out.println("排序之前的list：");
 		studentImplementsComparableList.stream().forEach(System.out::println);
+		System.out.println("------------------------------------");
 
-		System.out.println("---------（Collections.sort）------------");
-		System.out.println("排序之后的list：");
 		Collections.sort(studentImplementsComparableList);// 升序
 		studentImplementsComparableList.stream().forEach(System.out::println);
-		System.out.println("------------------------------------");
-		Collections.reverse(studentImplementsComparableList);// 降序
-		studentImplementsComparableList.stream().forEach(System.out::println);
+//		Collections.reverse(studentImplementsComparableList);// 降序
+//		studentImplementsComparableList.stream().forEach(System.out::println);
 
-		System.out.println("---------（使用lambda表达式排序之后）------------");
-		studentImplementsComparableList.sort(Student_Implements_Comparable::compareTo);
-		studentImplementsComparableList.stream().forEach(System.out::println);
+		
+//		System.out.println("---------（使用自定义排序之后）------------");
+//		studentImplementsComparableList.sort(new Comparator<Student_Implements_Comparable>() {
+//			@Override
+//			public int compare(Student_Implements_Comparable o1, Student_Implements_Comparable o2) {
+//				// 先按照年龄排序
+//				Integer i = o1.getAge().compareTo(o2.getAge());
+//				if (i == 0) {
+//					// 如果年龄相等，则按照分数排序
+//					i = o1.getScore().compareTo(o2.getScore());
+//					if (i == 0) {
+//						// 如果分数相等，则按照姓名排序
+//						i = o1.getName().compareTo(o2.getName());
+//					}
+//				}
+//				return i;
+//			}
+//		});
+//		studentImplementsComparableList.stream().forEach(System.out::println);
+		
+//		studentImplementsComparableList.sort(Comparator.naturalOrder());
+//		studentImplementsComparableList.sort(Comparator.reverseOrder());
+//		studentImplementsComparableList.stream().forEach(System.out::println);
+		
+//		studentImplementsComparableList.sort((a, b) -> a.compareTo(b));
+//		studentImplementsComparableList.stream().forEach(System.out::println);
+		
+//		studentImplementsComparableList.sort(Student_Implements_Comparable::compareTo);
+//		studentImplementsComparableList.stream().forEach(System.out::println);
+//
+//		studentImplementsComparableList.stream().sorted(Comparator.naturalOrder()).forEach(System.out::println);// 升序
+//		studentImplementsComparableList.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);// 降序
 
-		studentImplementsComparableList.stream().sorted(Comparator.naturalOrder()).forEach(System.out::println);// 升序
-		studentImplementsComparableList.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);// 降序
+//		studentImplementsComparableList.stream().sorted((a, b) -> a.compareTo(b)).forEach(System.out::println);// 升序
+//		studentImplementsComparableList.stream().sorted((a, b) -> b.compareTo(a)).forEach(System.out::println);// 升序
 
-		studentImplementsComparableList.stream().sorted((a, b) -> a.compareTo(b)).forEach(System.out::println);// 升序
-		studentImplementsComparableList.stream().sorted((a, b) -> b.compareTo(a)).forEach(System.out::println);// 升序
-
-		System.out.println("---------（使用自定义排序之后）------------");
-		studentImplementsComparableList.sort(new Comparator<Student_Implements_Comparable>() {
-			@Override
-			public int compare(Student_Implements_Comparable o1, Student_Implements_Comparable o2) {
-				// 先按照年龄排序
-				Integer i = o1.getAge().compareTo(o2.getAge());
-				if (i == 0) {
-					// 如果年龄相等，则按照分数排序
-					i = o1.getScore().compareTo(o2.getScore());
-					if (i == 0) {
-						// 如果分数相等，则按照姓名排序
-						i = o1.getName().compareTo(o2.getName());
-					}
-				}
-				return i;
-			}
-		});
-		studentImplementsComparableList.stream().forEach(System.out::println);
-
+//		studentImplementsComparableList.stream().sorted(Student_Implements_Comparable::compareTo).forEach(System.out::println);// 升序
+		
+//		studentImplementsComparableList.stream().sorted(new Comparator<Student_Implements_Comparable>() {
+//			@Override
+//			public int compare(Student_Implements_Comparable o1, Student_Implements_Comparable o2) {
+//				// 先按照年龄排序
+//				Integer i = o2.getAge().compareTo(o1.getAge());
+//				if (i == 0) {
+//					// 如果年龄相等，则按照分数排序
+//					i = o1.getScore().compareTo(o2.getScore());
+//					if (i == 0) {
+//						// 如果分数相等，则按照姓名排序
+//						i = o1.getName().compareTo(o2.getName());
+//					}
+//				}
+//				return i;
+//			}
+//		}).forEach(System.out::println);
 	}
 }
 
 class Student_Implements_Comparable implements Comparable<Student_Implements_Comparable> {
-
+//	class Student_Implements_Comparable {
 	private Integer age;
 	private Integer score;
 	private String name;
