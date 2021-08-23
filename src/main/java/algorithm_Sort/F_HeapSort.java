@@ -8,7 +8,8 @@ public class F_HeapSort {
         int[] array = new int[]{5, 8, 6, 3, 9, 2, 1, 2};
         System.out.println("原始：");
         System.out.println(Arrays.toString(array));
-        build(array);
+        
+        buildHeap(array);
         System.out.println("构建二叉堆：");
         System.out.println(Arrays.toString(array));
         System.out.println("堆排序：");
@@ -22,7 +23,7 @@ public class F_HeapSort {
         }
 
     }
-    public static void build(int[] arr) {
+    public static void buildHeap(int[] arr) {
         for (int i = (arr.length - 1 - 1) / 2; i >= 0; i--) {
             down(arr, i, arr.length);
         }
