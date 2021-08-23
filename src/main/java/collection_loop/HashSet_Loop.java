@@ -1,4 +1,4 @@
-package loop;
+package collection_loop;
 
 public class HashSet_Loop {
 

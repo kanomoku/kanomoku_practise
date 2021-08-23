@@ -1,4 +1,4 @@
-package loop;
+package collection_loop;
 
 import java.util.HashMap;
 import java.util.Iterator;

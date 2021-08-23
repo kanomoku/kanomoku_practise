@@ -1,4 +1,4 @@
-package list;
+package collection_list;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

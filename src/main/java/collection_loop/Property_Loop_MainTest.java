@@ -1,4 +1,4 @@
-package loop;
+package collection_loop;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
