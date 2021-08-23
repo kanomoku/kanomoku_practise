@@ -9,7 +9,7 @@ public class StackBasicExample {
 		Stack<Integer> stack = new Stack<>();
 		System.out.println("Empty stack : " + stack);
 		System.out.println("Empty stack : " + stack.isEmpty());
-		stack.push(1001);
+		System.out.println("push stack : " + stack.push(1001));
 		stack.push(1002);
 		stack.push(1003);
 		stack.push(1004);
@@ -18,6 +18,8 @@ public class StackBasicExample {
 		System.out.println("Non-Empty stack : After Pop Operation : " + stack);
 		System.out.println("Non-Empty stack : search() Operation : " + stack.search(1002));
 		System.out.println("Non-Empty stack : " + stack.isEmpty());
+		System.out.println("Non-Empty stack : " + stack.peek());
+		System.out.println("Non-Empty stack : " + stack);
 	}
 
 	@Test

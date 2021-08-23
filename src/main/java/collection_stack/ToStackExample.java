@@ -31,7 +31,7 @@ public class ToStackExample {
 	}
 
 	@Test
-	public void StackBasicExample() {
+	public void StackToListExample() {
 		Stack<Integer> stack = new Stack<>();
 		stack.push(1);
 		stack.push(2);
