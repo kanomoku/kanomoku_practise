@@ -13,14 +13,15 @@ public class ReferenceCountingGC {
 	 */
 	private byte[] bigSize = new byte[2 * _1MB];
 
-	public static void testGC() {
+	public static void main(String[] args) {
+//	public static void testGC() {
 		ReferenceCountingGC objA = new ReferenceCountingGC();
 		ReferenceCountingGC objB = new ReferenceCountingGC();
 		objA.instance = objB;
 		objB.instance = objA;
 		objA = null;
 		objB = null;
-// 假设在这行发生GC，那么objA和objB是否能被回收？
+		// 假设在这行发生GC，那么objA和objB是否能被回收？
 		System.gc();
 	}
 }

@@ -1,6 +1,6 @@
 package jvm;
 
-public class JvmPractise7_TLAB {
+public class Jvm7_TLAB {
 	private static void alloc() {
 		byte[] b = new byte[2];
 	}
