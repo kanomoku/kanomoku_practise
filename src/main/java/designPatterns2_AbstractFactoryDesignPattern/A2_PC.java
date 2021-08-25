@@ -1,4 +1,4 @@
-package designPatterns_AbstractFactoryDesignPattern;
+package designPatterns2_AbstractFactoryDesignPattern;
 
 public class A2_PC extends A1_Computer {
  

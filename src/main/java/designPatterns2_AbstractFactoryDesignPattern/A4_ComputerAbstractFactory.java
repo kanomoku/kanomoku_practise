@@ -1,4 +1,4 @@
-package designPatterns_AbstractFactoryDesignPattern;
+package designPatterns2_AbstractFactoryDesignPattern;
 
 public interface A4_ComputerAbstractFactory {
 

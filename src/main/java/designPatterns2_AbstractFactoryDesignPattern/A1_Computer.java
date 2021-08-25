@@ -1,4 +1,4 @@
-package designPatterns_AbstractFactoryDesignPattern;
+package designPatterns2_AbstractFactoryDesignPattern;
 
 public abstract class A1_Computer {
      

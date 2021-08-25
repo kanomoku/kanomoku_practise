@@ -1,4 +1,4 @@
-package designPatterns_AbstractFactoryDesignPattern;
+package designPatterns2_AbstractFactoryDesignPattern;
 
 public class A5_PCFactory implements A4_ComputerAbstractFactory {
 
