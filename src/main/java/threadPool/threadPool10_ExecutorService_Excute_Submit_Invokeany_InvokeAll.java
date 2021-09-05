@@ -1,5 +1,6 @@
 package threadPool;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -72,7 +73,8 @@ public class threadPool10_ExecutorService_Excute_Submit_Invokeany_InvokeAll {
 		// invokeAll触发执行任务列表，返回的结果顺序也与任务在任务列表中的顺序一致.所有线程执行完任务后才返回结果。如果设置了超时时间，未超时完成则正常返回结果，如果超时未完成则报异常。
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
-        Set<Callable<String>> callables = new HashSet<Callable<String>>();
+//        Set<Callable<String>> callables = new HashSet<Callable<String>>();
+        List<Callable<String>> callables = new ArrayList();
 
         callables.add(new Callable<String>() {
             public String call() throws Exception {
