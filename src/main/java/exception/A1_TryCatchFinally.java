@@ -1,9 +1,9 @@
-package throwable_exception;
+package exception;
 
-public class Exception_TryCatchFinally {
+public class A1_TryCatchFinally {
 	public static void main(String[] args) {
 		
-		Exception_TryCatchFinally test = new Exception_TryCatchFinally();
+		A1_TryCatchFinally test = new A1_TryCatchFinally();
 		String res = test.testTryCatchFinally();
 		System.out.println(res);
 		
