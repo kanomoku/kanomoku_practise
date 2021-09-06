@@ -1,6 +1,6 @@
 package designPatterns3_BuilderDesignPattern;
 
-public class Computer {
+public class A1_Computer {
 	
 	//required parameters
 	private String HDD;
@@ -27,13 +27,19 @@ public class Computer {
 		return isBluetoothEnabled;
 	}
 	
-	private Computer(ComputerBuilder builder) {
+	private A1_Computer(ComputerBuilder builder) {
 		this.HDD=builder.HDD;
 		this.RAM=builder.RAM;
 		this.isGraphicsCardEnabled=builder.isGraphicsCardEnabled;
 		this.isBluetoothEnabled=builder.isBluetoothEnabled;
 	}
 	
+	@Override
+	public String toString() {
+		return "A1_Computer [HDD=" + HDD + ", RAM=" + RAM + ", isGraphicsCardEnabled=" + isGraphicsCardEnabled
+				+ ", isBluetoothEnabled=" + isBluetoothEnabled + "]";
+	}
+
 	//Builder Class
 	public static class ComputerBuilder{
 
@@ -60,11 +66,9 @@ public class Computer {
 			return this;
 		}
 		
-		public Computer build(){
-			return new Computer(this);
+		public A1_Computer build(){
+			return new A1_Computer(this);
 		}
-
 	}
-
 }
 
