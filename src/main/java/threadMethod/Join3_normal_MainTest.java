@@ -1,6 +1,6 @@
 package threadMethod;
 
-public class Join5_normal_MainTest {
+public class Join3_normal_MainTest {
     public static void main(String[] args){
         Join1_One one = new Join1_One();
         Join2_Two two = new Join2_Two();

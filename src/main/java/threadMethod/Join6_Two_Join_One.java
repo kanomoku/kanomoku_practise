@@ -3,7 +3,7 @@ package threadMethod;
 import java.util.Date;
 
 //两个线程合并成一个线程
-public class Join4_Two_Join_One extends Thread {
+public class Join6_Two_Join_One extends Thread {
     public void run() {
         System.out.println(Thread.currentThread().getName() + "  thread_one start " + new Date());
         Join2_Two two = new Join2_Two();
