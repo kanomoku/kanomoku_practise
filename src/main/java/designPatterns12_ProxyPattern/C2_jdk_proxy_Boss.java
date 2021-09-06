@@ -1,4 +1,4 @@
-package designPatterns_ProxyPattern;
+package designPatterns12_ProxyPattern;
 
 public class C2_jdk_proxy_Boss implements C1_jdk_proxy_Function {
 	public C2_jdk_proxy_Boss(String name) {

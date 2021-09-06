@@ -1,4 +1,4 @@
-package designPatterns_ProxyPattern;
+package designPatterns12_ProxyPattern;
 
 public class D1_cglib_proxy_Boss {
 	public D1_cglib_proxy_Boss(String name) {

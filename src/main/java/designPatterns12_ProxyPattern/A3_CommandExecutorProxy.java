@@ -1,4 +1,4 @@
-package designPatterns_ProxyPattern;
+package designPatterns12_ProxyPattern;
 
 public class A3_CommandExecutorProxy implements A1_CommandExecutor {
 

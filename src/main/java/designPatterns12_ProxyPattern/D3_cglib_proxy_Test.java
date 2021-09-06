@@ -1,4 +1,4 @@
-package designPatterns_ProxyPattern;
+package designPatterns12_ProxyPattern;
 
 import org.springframework.cglib.proxy.Enhancer;
 

@@ -1,4 +1,4 @@
-package designPatterns_ProxyPattern;
+package designPatterns12_ProxyPattern;
 
 import java.lang.reflect.Method;
 

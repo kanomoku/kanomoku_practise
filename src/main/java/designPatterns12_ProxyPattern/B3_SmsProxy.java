@@ -1,4 +1,4 @@
-package designPatterns_ProxyPattern;
+package designPatterns12_ProxyPattern;
 
 public class B3_SmsProxy implements B1_SmsService {
 

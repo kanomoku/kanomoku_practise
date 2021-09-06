@@ -1,4 +1,4 @@
-package designPatterns_ProxyPattern;
+package designPatterns12_ProxyPattern;
 
 public interface C1_jdk_proxy_Function {
 	void target();
