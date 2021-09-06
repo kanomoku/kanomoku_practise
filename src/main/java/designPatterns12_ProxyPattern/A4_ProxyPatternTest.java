@@ -13,7 +13,5 @@ public class A4_ProxyPatternTest {
 		} catch (Exception e) {
 			System.out.println("Exception Message::" + e.getMessage());
 		}
-
 	}
-
 }
