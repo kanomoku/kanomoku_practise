@@ -1,4 +1,4 @@
-package designPatterns_SingletonPattern;
+package designPatterns5_SingletonPattern;
 
 public class A3_LazyInitializedSingleton {
 

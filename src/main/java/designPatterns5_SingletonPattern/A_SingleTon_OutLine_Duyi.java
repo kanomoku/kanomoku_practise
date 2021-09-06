@@ -1,4 +1,4 @@
-package designPatterns_SingletonPattern;
+package designPatterns5_SingletonPattern;
 
 public class A_SingleTon_OutLine_Duyi {
     //通过设计，让这个类只有一个对象

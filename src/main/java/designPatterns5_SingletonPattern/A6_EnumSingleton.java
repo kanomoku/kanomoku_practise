@@ -1,4 +1,4 @@
-package designPatterns_SingletonPattern;
+package designPatterns5_SingletonPattern;
 
 //To overcome this situation with Reflection
 
