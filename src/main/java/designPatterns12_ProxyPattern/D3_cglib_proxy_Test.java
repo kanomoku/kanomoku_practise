@@ -18,7 +18,7 @@ public class D3_cglib_proxy_Test {
 		Enhancer enhancer = new Enhancer();
 		enhancer.setSuperclass(D1_cglib_proxy_Boss.class);
 		enhancer.setCallback(new D2_cglib_proxy_Secretary());
-		D1_cglib_proxy_Boss laozong = (D1_cglib_proxy_Boss) enhancer.create();
-		laozong.chifan("土豆");
+		D1_cglib_proxy_Boss boss = (D1_cglib_proxy_Boss) enhancer.create();
+		boss.eat("土豆");
 	}
 }
