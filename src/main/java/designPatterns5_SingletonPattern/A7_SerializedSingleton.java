@@ -22,5 +22,4 @@ public class A7_SerializedSingleton implements Serializable {
 	public static A7_SerializedSingleton getInstance() {
 		return SingletonHelper.instance;
 	}
-
 }

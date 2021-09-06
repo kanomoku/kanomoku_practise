@@ -28,8 +28,6 @@ public class T2_SerializedSingletonTest {
 		System.out.println("instanceOne hashCode=" + instanceOne.hashCode());
 		System.out.println("instanceTwo hashCode=" + instanceTwo.hashCode());
 		System.out.println("---------------------------------------");
-
-
 	}
 	@Test
 	public void test2() throws FileNotFoundException, IOException, ClassNotFoundException {
@@ -46,7 +44,5 @@ public class T2_SerializedSingletonTest {
 		System.out.println("instanceOne hashCode=" + instanceOne.hashCode());
 		System.out.println("instanceTwo hashCode=" + instanceTwo.hashCode());
 		System.out.println("---------------------------------------");
-
-
 	}
 }

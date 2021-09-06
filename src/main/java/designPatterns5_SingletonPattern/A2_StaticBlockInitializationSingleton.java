@@ -8,8 +8,7 @@ public class A2_StaticBlockInitializationSingleton {
 	}
 
 	// Static block initialization implementation is similar to eager initialization, 
-	//except that instance of class is created in the static block that provides
-	// option for exception handling.
+	// except that instance of class is created in the static block that provides option for exception handling.
 	static {
 		try {
 			instance = new A2_StaticBlockInitializationSingleton();

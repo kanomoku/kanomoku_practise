@@ -14,7 +14,7 @@ public class A4_LazyInitializedSingletonThreadSafe {
 		return instance;
 	}
 	
-	//To avoid this extra overhead every time
+	//To avoid this extra overhead every time, double checked locking principle is used
 	public static A4_LazyInitializedSingletonThreadSafe getInstanceUsingDoubleLocking(){
 	    if(instance == null){
 	        synchronized (A4_LazyInitializedSingletonThreadSafe.class) {

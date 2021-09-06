@@ -159,7 +159,7 @@ public class T1_ReflectionDistorySingletonTest {
 	public void test8() {
 		System.out.println("-----8----------------------------------");
 		A8_SerializedSingletonReadResolve instanceOne = A8_SerializedSingletonReadResolve.getInstance();
-		System.out.println(instanceOne.hashCode());
+//		System.out.println(instanceOne.hashCode());
 		
 		A8_SerializedSingletonReadResolve instanceTwo = null;
 		try {
@@ -173,7 +173,6 @@ public class T1_ReflectionDistorySingletonTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		System.out.println(instanceTwo.hashCode());
 		System.out.println("-----8----------------------------------");
 
