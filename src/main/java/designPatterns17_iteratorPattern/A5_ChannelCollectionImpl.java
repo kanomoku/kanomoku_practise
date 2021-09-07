@@ -41,8 +41,9 @@ public class A5_ChannelCollectionImpl implements A4_ChannelCollection {
 				A2_Channel c = channels.get(position);
 				if (c.getTYPE().equals(type) || type.equals(A1_ChannelTypeEnum.ALL)) {
 					return true;
-				} else
+				} else {
 					position++;
+				}
 			}
 			return false;
 		}
@@ -53,6 +54,5 @@ public class A5_ChannelCollectionImpl implements A4_ChannelCollection {
 			position++;
 			return c;
 		}
-
 	}
 }
