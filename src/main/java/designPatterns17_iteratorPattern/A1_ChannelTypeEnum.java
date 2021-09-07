@@ -1,4 +1,4 @@
-package designPatterns_iteratorPattern;
+package designPatterns17_iteratorPattern;
 
 public enum A1_ChannelTypeEnum {
 
