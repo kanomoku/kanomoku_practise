@@ -1,8 +1,9 @@
-package designPatterns_StrategyPattern;
+package designPatterns22_StrategyDesignPattern;
 
 public class A6_ShoppingCartTest {
 
 	public static void main(String[] args) {
+		
 		A5_ShoppingCart cart = new A5_ShoppingCart();
 
 		A4_Item item1 = new A4_Item("1234", 10);
@@ -17,5 +18,4 @@ public class A6_ShoppingCartTest {
 		// pay by credit card
 		cart.pay(new A2_CreditCardStrategy("Pankaj Kumar", "1234567890123456", "786", "12/15"));
 	}
-
 }

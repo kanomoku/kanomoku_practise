@@ -1,4 +1,4 @@
-package designPatterns_StrategyPattern;
+package designPatterns22_StrategyDesignPattern;
 
 public class A2_CreditCardStrategy implements A1_PaymentStrategy {
 
@@ -18,5 +18,4 @@ public class A2_CreditCardStrategy implements A1_PaymentStrategy {
 	public void pay(int amount) {
 		System.out.println(amount + " paid with credit/debit card");
 	}
-
 }

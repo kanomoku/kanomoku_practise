@@ -1,4 +1,4 @@
-package designPatterns_StrategyPattern;
+package designPatterns22_StrategyDesignPattern;
 
 import java.util.ArrayList;
 import java.util.List;

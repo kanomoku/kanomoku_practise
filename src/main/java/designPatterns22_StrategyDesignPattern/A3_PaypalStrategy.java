@@ -1,4 +1,4 @@
-package designPatterns_StrategyPattern;
+package designPatterns22_StrategyDesignPattern;
 
 public class A3_PaypalStrategy implements A1_PaymentStrategy {
 
@@ -14,5 +14,4 @@ public class A3_PaypalStrategy implements A1_PaymentStrategy {
 	public void pay(int amount) {
 		System.out.println(amount + " paid using Paypal.");
 	}
-
 }

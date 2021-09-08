@@ -1,4 +1,4 @@
-package designPatterns_StrategyPattern;
+package designPatterns22_StrategyDesignPattern;
 
 public class A4_Item {
 
