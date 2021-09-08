@@ -1,4 +1,4 @@
-package designPatterns_StatePattern;
+package designPatterns21_StatePattern;
 
 public class A5_TVContext implements A2_State {
 
@@ -16,6 +16,5 @@ public class A5_TVContext implements A2_State {
 	public void doAction() {
 		this.tvState.doAction();
 	}
-
 }
 

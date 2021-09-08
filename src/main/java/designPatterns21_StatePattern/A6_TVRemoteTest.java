@@ -1,4 +1,4 @@
-package designPatterns_StatePattern;
+package designPatterns21_StatePattern;
 
 public class A6_TVRemoteTest {
 
@@ -13,7 +13,5 @@ public class A6_TVRemoteTest {
 		
 		context.setState(tvStopState);
 		context.doAction();
-		
 	}
-
 }

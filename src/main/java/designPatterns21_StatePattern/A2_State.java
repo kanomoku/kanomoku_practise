@@ -1,4 +1,4 @@
-package designPatterns_StatePattern;
+package designPatterns21_StatePattern;
 
 public interface A2_State {
 	public void doAction();
