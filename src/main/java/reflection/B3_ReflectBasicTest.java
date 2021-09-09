@@ -17,7 +17,7 @@ public class B3_ReflectBasicTest {
 			 * 如何获取Class ----三种方式
 			 */
 			// 静态方法
-			Class clazz = Class.forName("reflection.B3_Person");
+			Class clazz = Class.forName("reflection.B2_Person");
 			// 类名.class;
 			Class c1 = B1_Animal.class;
 			// 对象.getClass();//Object类中的方法
@@ -32,20 +32,8 @@ public class B3_ReflectBasicTest {
 			// 类自己有结构 权限修饰符 特征修饰符 类名字 继承 实现
 			int midifiers = clazz.getModifiers();
 			System.out.println("修饰符权限：" + midifiers);
-			// 0开始---0 1 2 4 8 16 32 64 128 256
-			// 0 默认不写
-			// 1 public
-			// 2 private
-			// 4 protected
-			// 8 static
-			// 16 final
-			// 32 synchronized
-			// 64 volatile
-			// 128 transient
-			// 256 native
-			// 512 interface
-			// 1024 abstract
-
+			//0 默认不写 1 public 2 private 4 protected 8 static 16 Modifiers 32 synchronized 64 volatile 128 transient 256 native 512 interface 1024 abstract
+			
 			// 获取类名字
 			String name = clazz.getName();
 			String simpleName = clazz.getSimpleName();

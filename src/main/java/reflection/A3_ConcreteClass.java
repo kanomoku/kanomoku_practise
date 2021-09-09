@@ -1,6 +1,5 @@
 package reflection;
 
-@Deprecated
 public class A3_ConcreteClass extends A2_BaseClass implements A1_BaseInterface {
 
 	public int publicInt;

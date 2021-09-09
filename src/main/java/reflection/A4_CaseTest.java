@@ -3,6 +3,7 @@ package reflection;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
@@ -10,42 +11,94 @@ import org.junit.jupiter.api.Test;
 public class A4_CaseTest {
 
 	@Test
-	public void test1() {
+	public void test1() throws ClassNotFoundException {
 
-		// Get Class using reflection
-		Class<?> concreteClass = A3_ConcreteClass.class;
-		concreteClass = new A3_ConcreteClass(5).getClass();
 		try {
-			// below method is used most of the times in frameworks like
-			// JUnit
-			// Spring dependency injection,
-			// Tomcat web container Eclipse auto completion of method names,
-			// hibernate, Struts2 etc.
-			// because ConcreteClass is not available at compile time
+			Class<?> concreteClass = A3_ConcreteClass.class;
+			System.out.println(concreteClass.getCanonicalName());
+			concreteClass = new A3_ConcreteClass(5).getClass();
+			System.out.println(concreteClass.getCanonicalName());
 			concreteClass = Class.forName("reflection.A3_ConcreteClass");
+			System.out.println(concreteClass.getName());
+			System.out.println(concreteClass.getSimpleName());
+			System.out.println(concreteClass.getCanonicalName());
+			System.out.println("******************");
+			// for primitive types, wrapper classes and arrays
+			Class<?> obj = Byte.TYPE;
+			System.out.println(obj.getCanonicalName());
+			obj = Short.TYPE;
+			System.out.println(obj.getCanonicalName());
+			obj = Integer.TYPE;
+			System.out.println(obj.getCanonicalName());
+			obj = Long.TYPE;
+			System.out.println(obj.getCanonicalName());
+			obj = Float.TYPE;
+			System.out.println(obj.getCanonicalName());
+			obj = Double.TYPE;
+			System.out.println(obj.getCanonicalName());
+			obj = Boolean.TYPE;
+			System.out.println(obj.getCanonicalName());
+			obj = boolean.class;
+			System.out.println(obj.getCanonicalName());
+			obj = Character.TYPE;
+			System.out.println(obj.getCanonicalName());
+
+			System.out.println("******************");
+			obj = Class.forName("[B");
+			System.out.println(obj.getCanonicalName());
+			obj = Class.forName("[S");
+			System.out.println(obj.getCanonicalName());
+			obj = Class.forName("[I");
+			System.out.println(obj.getCanonicalName());
+			obj = Class.forName("[F");
+			System.out.println(obj.getCanonicalName());
+			obj = Class.forName("[D");
+			System.out.println(obj.getCanonicalName());
+			obj = Class.forName("[C");
+			System.out.println(obj.getCanonicalName());
+			System.out.println("******************");
+
+			obj = Byte[].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Short[].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Integer[].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Long[].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Float[].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Double[].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Boolean[].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Character[].class;
+			System.out.println(obj.getCanonicalName());
+			obj = String[].class;
+			System.out.println(obj.getCanonicalName());
+			System.out.println("******************");
+
+			obj = Byte[][].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Short[][].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Integer[][].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Long[][].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Float[][].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Double[][].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Boolean[][].class;
+			System.out.println(obj.getCanonicalName());
+			obj = Character[][].class;
+			System.out.println(obj.getCanonicalName());
+			obj = String[][].class;
+			System.out.println(obj.getCanonicalName());
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		System.out.println(concreteClass.getCanonicalName());
-
-		// for primitive types, wrapper classes and arrays
-		Class<?> booleanClass = boolean.class;
-		System.out.println(booleanClass.getCanonicalName()); // prints boolean
-
-		Class<?> cDouble = Double.TYPE;
-		System.out.println(cDouble.getCanonicalName()); // prints double
-
-		try {
-			Class<?> cDoubleArray;
-			cDoubleArray = Class.forName("[D");
-			System.out.println(cDoubleArray.getCanonicalName()); // prints double[]
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-
-		Class<?> twoDStringArray = String[][].class;
-		System.out.println(twoDStringArray.getCanonicalName()); // prints java.lang.String[][]
-
 	}
 
 	@Test
@@ -63,20 +116,19 @@ public class A4_CaseTest {
 	}
 
 	@Test
-	public void test3() throws ClassNotFoundException {
-		Class<?> concreteClass = Class.forName("reflection.A3_ConcreteClass");
+	public void testInnerClass() throws ClassNotFoundException {
 
-		// returns an array containing Class objects representing all the public
-		// classes, interfaces and enums that are members of the class represented by
-		// this Class object.
+		Class<?> concreteClass = Class.forName("reflection.A3_ConcreteClass");
 		Class<?>[] classes = concreteClass.getClasses();
 		System.out.println(Arrays.toString(classes));
+		classes = concreteClass.getDeclaredClasses();
+		System.out.println(Arrays.toString(classes));
+
 	}
 
 	@Test
 	public void test4() throws ClassNotFoundException {
-		// getting all of the classes, interfaces, and enums that are explicitly
-		// declared in A3_ConcreteClass
+		
 		Class<?>[] explicitClasses = Class.forName("reflection.A3_ConcreteClass").getDeclaredClasses();
 		System.out.println(Arrays.toString(explicitClasses));
 
