@@ -1,5 +1,7 @@
 package string;
 
+import org.junit.Test;
+
 /**
  * @author Administrator
  *
@@ -7,13 +9,8 @@ package string;
 
 public class String_Basic {
 
-    public static void main(String[] args) {
-        /**
-         *构造方法
-         */
-        //*1. String()-- > 其实就是 String s2 = ""
-        String s8 = new String();
-        String s9 = "";
+	@Test
+	public void newTest(){
         //*2. String( byte[] bytes)
         String s5 = new String(new byte[]{65, 97, 48}); //Aa0
         System.out.println(s5);
@@ -24,8 +21,12 @@ public class String_Basic {
         //7. String( byte[] ascii, int hibyte, int offset, int count) //Deprecated.
         //8. String( byte[] bytes, int offset, int length, String charsetName)
         //9. String( byte[] bytes, String charsetName)
+	}
+	@Test
+	public void newTest1(){
         //10. String( char[] value)
         String str = new String(new char[]{'A', 'a', '0'}); //Aa0
+        System.out.println(str);
         //11. String( char[] value, int offset, int count)
         char[] value = {'A', 'a', '0', '1'};
         String s6 = new String(value, 1, 3); //a01 偏移量--后面的参数表示偏移几位
@@ -33,22 +34,25 @@ public class String_Basic {
         System.out.println(s7);
         //12. String( int[] codePoints, int offset, int count)
         String s10 = new String(new int[]{65, 97, 48}, 1, 2); //a0
-        System.out.println("s10 " + s10);
+        System.out.println("s10 值：" + s10);
         //String s12 = new String(new int[]{65, 97, 48}, 1, 3); //java.lang.StringIndexOutOfBoundsException: String index out of range: 4
+	}
+	
+	@Test
+	public void newTest2(){
         //13. String(String original) //其实就是String s1 = "abc"
-        String s11 = new String("abc");
+        String s11 = new String("originalString");
         //14. String(StringBuffer buffer)
         //15. String(StringBuilder builder)
-        System.out.println("-------------------------------------------------------");
-
-        
-        /**
-         * String类中常用的方法 20+
-         */
-        /*
-         *         1.boolean = equals(Object obj); 继承自Object 但是重写了 重写他的时候通常也重写hashCode
-         *           equalsIgnoreCase(String anotherString) 忽略大小写
-         */
+	}
+	
+	@Test
+	public void compareTest(){
+		
+		/*
+		 * 1.boolean = equals(Object obj); 继承自Object 但是重写了 重写他的时候通常也重写hashCode
+		 * equalsIgnoreCase(String anotherString) 忽略大小写
+		 */
         /*
          *        2. int i = str.hashCode();
          *         继承自Object
@@ -69,6 +73,46 @@ public class String_Basic {
         String s12 = "abe";
         System.out.println(s13.compareTo(s12));
         System.out.println("-------------------------------------------------------");
+		
+	}
+	
+	@Test
+	public void test() {
+		int a = 128;
+		
+		Integer c = new Integer(128);
+		Integer c1 = new Integer(128);
+		System.out.println(c1 == c); // false
+//		new生成的Integer变量永远是不相等的（因为new生成的是两个对象，其内存地址不同）
+		
+		Integer b = 128;
+		Integer b1 = 128;
+		System.out.println(b1 == b); // false
+//		Integer缓存范围是[-128 ~ 127],超出此范围，会在堆中new出一个对象来存储。
+		
+		System.out.println(c == b); // false
+//		变量b是java常量池中存储的引用，指向堆中的对象，而变量c指向堆中新建的对象，两者在内存中的地址不同
+		
+		Integer d = 100;
+		Integer d1 = 100;
+		System.out.println(d1 == d); // true
+//		Integer缓存范围是[-128 ~ 127],存在缓存里
+		
+	}
+	
+    public static void main(String[] args) {
+        /**
+         *构造方法
+         */
+        //*1. String()-- > 其实就是 String s2 = ""
+        String s8 = new String();
+        String s9 = "";
+
+        /**
+         * String类中常用的方法 20+
+         */
+
+
 
         /**
          *    4.toString();继承自Object
