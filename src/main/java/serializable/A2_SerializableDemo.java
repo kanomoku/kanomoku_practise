@@ -8,12 +8,13 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-public class SerializableDemo {
+public class A2_SerializableDemo {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		// Initializes The Object
-		User user = new User();
+		A1_User user = new A1_User();
 		user.setName("xiaoming");
+		user.setAge(18);
 		System.out.println(user);
 
 		// Write Obj to File
@@ -28,7 +29,7 @@ public class SerializableDemo {
 		File file = new File("tempFile");
 		try {
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
-			User newUser = (User) ois.readObject();
+			A1_User newUser = (A1_User) ois.readObject();
 			System.out.println(newUser);
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
@@ -36,6 +37,3 @@ public class SerializableDemo {
 	}
 }
 
-// OutPut:
-// User{name='cosen'}
-// User{name='cosen'}
