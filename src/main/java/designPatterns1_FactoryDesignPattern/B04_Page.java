@@ -2,15 +2,15 @@ package designPatterns1_FactoryDesignPattern;
 import java.io.*;
 import java.util.ArrayList;
 
-public abstract class B4_Page {
+public abstract class B04_Page {
     protected String title;
     protected String author;
     protected ArrayList content = new ArrayList();
-    public B4_Page(String title, String author) {
+    public B04_Page(String title, String author) {
         this.title = title;
         this.author = author;
     }
-    public void add(B1_Item item) {
+    public void add(B01_Item item) {
         content.add(item);
     }
     public void output() {

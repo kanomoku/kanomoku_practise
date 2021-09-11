@@ -1,7 +1,7 @@
 package designPatterns1_FactoryDesignPattern;
 import java.util.Iterator;
 
-public class B12_TableTray extends B3_Tray {
+public class B12_TableTray extends B03_Tray {
     public B12_TableTray(String caption) {
         super(caption);                     // 使用super(...)表达式  
     }
@@ -14,7 +14,7 @@ public class B12_TableTray extends B3_Tray {
         buffer.append("<tr>\n");
         Iterator it = tray.iterator();
         while (it.hasNext()) {
-            B1_Item item = (B1_Item)it.next();
+            B01_Item item = (B01_Item)it.next();
             buffer.append(item.makeHTML());
         }
         buffer.append("</tr></table>");

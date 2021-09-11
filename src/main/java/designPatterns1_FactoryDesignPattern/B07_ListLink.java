@@ -1,7 +1,7 @@
 package designPatterns1_FactoryDesignPattern;
 
-public class B7_ListLink extends B2_Link {
-    public B7_ListLink(String caption, String url) {
+public class B07_ListLink extends B02_Link {
+    public B07_ListLink(String caption, String url) {
         super(caption, url);
     }
     public String makeHTML() {

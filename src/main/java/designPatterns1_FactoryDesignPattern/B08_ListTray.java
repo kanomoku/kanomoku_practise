@@ -1,8 +1,8 @@
 package designPatterns1_FactoryDesignPattern;
 import java.util.Iterator;
 
-public class B8_ListTray extends B3_Tray {
-    public B8_ListTray(String caption) {
+public class B08_ListTray extends B03_Tray {
+    public B08_ListTray(String caption) {
         super(caption);
     }
     public String makeHTML() {
@@ -12,7 +12,7 @@ public class B8_ListTray extends B3_Tray {
         buffer.append("<ul>\n");
         Iterator it = tray.iterator();
         while (it.hasNext()) {
-            B1_Item item = (B1_Item)it.next();
+            B01_Item item = (B01_Item)it.next();
             buffer.append(item.makeHTML());
         }
         buffer.append("</ul>\n");

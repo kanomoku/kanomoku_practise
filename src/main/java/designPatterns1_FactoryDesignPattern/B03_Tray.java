@@ -1,12 +1,12 @@
 package designPatterns1_FactoryDesignPattern;
 import java.util.ArrayList;
 
-public abstract class B3_Tray extends B1_Item {
+public abstract class B03_Tray extends B01_Item {
     protected ArrayList tray = new ArrayList();
-    public B3_Tray(String caption) {
+    public B03_Tray(String caption) {
         super(caption);
     }
-    public void add(B1_Item item) {
+    public void add(B01_Item item) {
         tray.add(item);
     }
 }

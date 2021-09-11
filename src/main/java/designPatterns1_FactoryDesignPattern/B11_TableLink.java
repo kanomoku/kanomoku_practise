@@ -1,6 +1,6 @@
 package designPatterns1_FactoryDesignPattern;
 
-public class B11_TableLink extends B2_Link {
+public class B11_TableLink extends B02_Link {
     public B11_TableLink(String caption, String url) {
         super(caption, url);
     }
