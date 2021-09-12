@@ -1,10 +1,10 @@
 package designPatterns16_CommandDesignPattern;
 
-public class A8_FileInvoker {
+public class A08_FileInvoker {
 
-	public A4_Command command;
+	public A04_Command command;
 	
-	public A8_FileInvoker(A4_Command c){
+	public A08_FileInvoker(A04_Command c){
 		this.command=c;
 	}
 	

@@ -1,6 +1,6 @@
 package designPatterns16_CommandDesignPattern;
 
-public interface A1_FileSystemReceiver {
+public interface A01_FileSystemReceiver {
 	void openFile();
 	void writeFile();
 	void closeFile();

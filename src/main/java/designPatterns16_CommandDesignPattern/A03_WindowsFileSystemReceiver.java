@@ -1,6 +1,6 @@
 package designPatterns16_CommandDesignPattern;
 
-public class A3_WindowsFileSystemReceiver implements A1_FileSystemReceiver {
+public class A03_WindowsFileSystemReceiver implements A01_FileSystemReceiver {
 	@Override
 	public void openFile() {
 		System.out.println("Opening file in Windows OS");

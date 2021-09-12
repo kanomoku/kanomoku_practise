@@ -1,5 +1,5 @@
 package designPatterns16_CommandDesignPattern;
 
-public interface A4_Command {
+public interface A04_Command {
 	void execute();
 }

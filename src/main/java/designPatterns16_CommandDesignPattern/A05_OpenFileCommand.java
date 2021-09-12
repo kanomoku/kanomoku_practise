@@ -1,10 +1,10 @@
 package designPatterns16_CommandDesignPattern;
 
-public class A5_OpenFileCommand implements A4_Command {
+public class A05_OpenFileCommand implements A04_Command {
 
-	private A1_FileSystemReceiver fileSystem;
+	private A01_FileSystemReceiver fileSystem;
 	
-	public A5_OpenFileCommand(A1_FileSystemReceiver fs){
+	public A05_OpenFileCommand(A01_FileSystemReceiver fs){
 		this.fileSystem=fs;
 	}
 	@Override
