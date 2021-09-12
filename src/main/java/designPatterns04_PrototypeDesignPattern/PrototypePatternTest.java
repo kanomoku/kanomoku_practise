@@ -9,8 +9,10 @@ public class PrototypePatternTest {
 		emps.loadData();
 		
 		//Use the clone method to get the Employee object
-		Employees empsNew = (Employees) emps.clone();
-		Employees empsNew1 = (Employees) emps.clone();
+//		Employees empsNew = (Employees) emps.clone();
+//		Employees empsNew1 = (Employees) emps.clone();
+		Employees empsNew = (Employees) emps.deepClone();
+		Employees empsNew1 = (Employees) emps.deepClone();
 		List<String> list = empsNew.getEmpList();
 		list.add("John");
 		List<String> list1 = empsNew1.getEmpList();
@@ -20,5 +22,4 @@ public class PrototypePatternTest {
 		System.out.println("empsNew List: "+list);
 		System.out.println("empsNew1 List: "+list1);
 	}
-
 }

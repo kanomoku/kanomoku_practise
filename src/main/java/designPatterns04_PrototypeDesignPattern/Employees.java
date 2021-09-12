@@ -1,9 +1,15 @@
 package designPatterns04_PrototypeDesignPattern;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Employees implements Cloneable{
+public class Employees implements Cloneable,Serializable{
 
 	private List<String> empList;
 	
@@ -34,5 +40,21 @@ public class Employees implements Cloneable{
 				temp.add(s);
 			}
 			return new Employees(temp);
+	}
+	
+	public Object deepClone() throws CloneNotSupportedException{
+		try {
+			ByteArrayOutputStream bos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(bos);
+			oos.writeObject(this);
+			
+			ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+			ObjectInputStream ois = new ObjectInputStream(bis);
+			return (Employees)ois.readObject();
+			
+		} catch (IOException | ClassNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 }

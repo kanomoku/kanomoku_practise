@@ -4,19 +4,19 @@ import java.lang.reflect.Constructor;
 
 import org.junit.jupiter.api.Test;
 
-public class T1_ReflectionDistorySingletonTest {
+public class A10_ReflectionDistorySingletonTest {
 
 	@Test
 	public void test1() {
 		System.out.println("---1------------------------------------");
-		A1_EagerInitializedSingleton instanceOne = A1_EagerInitializedSingleton.getInstance();
-		A1_EagerInitializedSingleton instanceTwo = null;
+		A01_EagerInitializedSingleton instanceOne = A01_EagerInitializedSingleton.getInstance();
+		A01_EagerInitializedSingleton instanceTwo = null;
 		try {
-			Constructor[] constructors = A1_EagerInitializedSingleton.class.getDeclaredConstructors();
+			Constructor[] constructors = A01_EagerInitializedSingleton.class.getDeclaredConstructors();
 			for (Constructor constructor : constructors) {
 				// Below code will destroy the singleton pattern
 				constructor.setAccessible(true);
-				instanceTwo = (A1_EagerInitializedSingleton) constructor.newInstance();
+				instanceTwo = (A01_EagerInitializedSingleton) constructor.newInstance();
 				break;
 			}
 		} catch (Exception e) {
@@ -30,14 +30,14 @@ public class T1_ReflectionDistorySingletonTest {
 	@Test
 	public void test2() {
 		System.out.println("---2------------------------------------");
-		A2_StaticBlockInitializationSingleton instanceOne = A2_StaticBlockInitializationSingleton.getInstance();
-		A2_StaticBlockInitializationSingleton instanceTwo = null;
+		A02_StaticBlockInitializationSingleton instanceOne = A02_StaticBlockInitializationSingleton.getInstance();
+		A02_StaticBlockInitializationSingleton instanceTwo = null;
 		try {
-			Constructor[] constructors = A2_StaticBlockInitializationSingleton.class.getDeclaredConstructors();
+			Constructor[] constructors = A02_StaticBlockInitializationSingleton.class.getDeclaredConstructors();
 			for (Constructor constructor : constructors) {
 				// Below code will destroy the singleton pattern
 				constructor.setAccessible(true);
-				instanceTwo = (A2_StaticBlockInitializationSingleton) constructor.newInstance();
+				instanceTwo = (A02_StaticBlockInitializationSingleton) constructor.newInstance();
 				break;
 			}
 		} catch (Exception e) {
@@ -51,14 +51,14 @@ public class T1_ReflectionDistorySingletonTest {
 	@Test
 	public void test3() {
 		System.out.println("----3-----------------------------------");
-		A3_LazyInitializedSingleton instanceOne = A3_LazyInitializedSingleton.getInstance();
-		A3_LazyInitializedSingleton instanceTwo = null;
+		A03_LazyInitializedSingleton instanceOne = A03_LazyInitializedSingleton.getInstance();
+		A03_LazyInitializedSingleton instanceTwo = null;
 		try {
-			Constructor[] constructors = A3_LazyInitializedSingleton.class.getDeclaredConstructors();
+			Constructor[] constructors = A03_LazyInitializedSingleton.class.getDeclaredConstructors();
 			for (Constructor constructor : constructors) {
 				// Below code will destroy the singleton pattern
 				constructor.setAccessible(true);
-				instanceTwo = (A3_LazyInitializedSingleton) constructor.newInstance();
+				instanceTwo = (A03_LazyInitializedSingleton) constructor.newInstance();
 				break;
 			}
 		} catch (Exception e) {
@@ -72,14 +72,14 @@ public class T1_ReflectionDistorySingletonTest {
 	@Test
 	public void test4() {
 		System.out.println("----4-----------------------------------");
-		A4_LazyInitializedSingletonThreadSafe instanceOne = A4_LazyInitializedSingletonThreadSafe.getInstance();
-		A4_LazyInitializedSingletonThreadSafe instanceTwo = null;
+		A04_LazyInitializedSingletonThreadSafe instanceOne = A04_LazyInitializedSingletonThreadSafe.getInstance();
+		A04_LazyInitializedSingletonThreadSafe instanceTwo = null;
 		try {
-			Constructor[] constructors = A4_LazyInitializedSingletonThreadSafe.class.getDeclaredConstructors();
+			Constructor[] constructors = A04_LazyInitializedSingletonThreadSafe.class.getDeclaredConstructors();
 			for (Constructor constructor : constructors) {
 				// Below code will destroy the singleton pattern
 				constructor.setAccessible(true);
-				instanceTwo = (A4_LazyInitializedSingletonThreadSafe) constructor.newInstance();
+				instanceTwo = (A04_LazyInitializedSingletonThreadSafe) constructor.newInstance();
 				break;
 			}
 		} catch (Exception e) {
@@ -93,14 +93,14 @@ public class T1_ReflectionDistorySingletonTest {
 	@Test
 	public void test5() {
 		System.out.println("------5---------------------------------");
-		A5_BillPughSingleton instanceOne = A5_BillPughSingleton.getInstance();
-		A5_BillPughSingleton instanceTwo = null;
+		A05_BillPughSingleton instanceOne = A05_BillPughSingleton.getInstance();
+		A05_BillPughSingleton instanceTwo = null;
 		try {
-			Constructor[] constructors = A5_BillPughSingleton.class.getDeclaredConstructors();
+			Constructor[] constructors = A05_BillPughSingleton.class.getDeclaredConstructors();
 			for (Constructor constructor : constructors) {
 				// Below code will destroy the singleton pattern
 				constructor.setAccessible(true);
-				instanceTwo = (A5_BillPughSingleton) constructor.newInstance();
+				instanceTwo = (A05_BillPughSingleton) constructor.newInstance();
 				break;
 			}
 		} catch (Exception e) {
@@ -114,16 +114,16 @@ public class T1_ReflectionDistorySingletonTest {
 	@Test
 	public void test6() {
 		System.out.println("------6---------------------------------");
-		A6_EnumSingleton instanceOne = A6_EnumSingleton.INSTANCE;
+		A06_EnumSingleton instanceOne = A06_EnumSingleton.INSTANCE;
 		System.out.println(instanceOne.hashCode());
 
-		A6_EnumSingleton instanceTwo = null;
+		A06_EnumSingleton instanceTwo = null;
 		try {
-			Constructor[] constructors = A6_EnumSingleton.class.getDeclaredConstructors();
+			Constructor[] constructors = A06_EnumSingleton.class.getDeclaredConstructors();
 			for (Constructor constructor : constructors) {
 				// Below code will destroy the singleton pattern
 				constructor.setAccessible(true);
-				instanceTwo = (A6_EnumSingleton) constructor.newInstance();
+				instanceTwo = (A06_EnumSingleton) constructor.newInstance();
 				break;
 			}
 		} catch (Exception e) {
@@ -136,14 +136,14 @@ public class T1_ReflectionDistorySingletonTest {
 	@Test
 	public void test7() {
 		System.out.println("-----7----------------------------------");
-		A7_SerializedSingleton instanceOne = A7_SerializedSingleton.getInstance();
-		A7_SerializedSingleton instanceTwo = null;
+		A07_SerializedSingleton instanceOne = A07_SerializedSingleton.getInstance();
+		A07_SerializedSingleton instanceTwo = null;
 		try {
-			Constructor[] constructors = A7_SerializedSingleton.class.getDeclaredConstructors();
+			Constructor[] constructors = A07_SerializedSingleton.class.getDeclaredConstructors();
 			for (Constructor constructor : constructors) {
 				// Below code will destroy the singleton pattern
 				constructor.setAccessible(true);
-				instanceTwo = (A7_SerializedSingleton) constructor.newInstance();
+				instanceTwo = (A07_SerializedSingleton) constructor.newInstance();
 				break;
 			}
 		} catch (Exception e) {
@@ -158,16 +158,16 @@ public class T1_ReflectionDistorySingletonTest {
 	@Test
 	public void test8() {
 		System.out.println("-----8----------------------------------");
-		A8_SerializedSingletonReadResolve instanceOne = A8_SerializedSingletonReadResolve.getInstance();
+		A08_SerializedSingletonReadResolve instanceOne = A08_SerializedSingletonReadResolve.getInstance();
 //		System.out.println(instanceOne.hashCode());
 		
-		A8_SerializedSingletonReadResolve instanceTwo = null;
+		A08_SerializedSingletonReadResolve instanceTwo = null;
 		try {
-			Constructor[] constructors = A8_SerializedSingletonReadResolve.class.getDeclaredConstructors();
+			Constructor[] constructors = A08_SerializedSingletonReadResolve.class.getDeclaredConstructors();
 			for (Constructor constructor : constructors) {
 				// Below code will destroy the singleton pattern
 				constructor.setAccessible(true);
-				instanceTwo = (A8_SerializedSingletonReadResolve) constructor.newInstance();
+				instanceTwo = (A08_SerializedSingletonReadResolve) constructor.newInstance();
 				break;
 			}
 		} catch (Exception e) {

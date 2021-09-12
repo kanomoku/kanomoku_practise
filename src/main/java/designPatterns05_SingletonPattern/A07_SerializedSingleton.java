@@ -8,18 +8,18 @@ import java.io.Serializable;
 
 //The problem with serialized singleton class is that 
 //whenever we deserialize it, it will create a new instance of the class
-public class A7_SerializedSingleton implements Serializable {
+public class A07_SerializedSingleton implements Serializable {
 
 	private static final long serialVersionUID = -7604766932017737115L;
 
-	private A7_SerializedSingleton() {
+	private A07_SerializedSingleton() {
 	}
 
 	private static class SingletonHelper {
-		private static final A7_SerializedSingleton instance = new A7_SerializedSingleton();
+		private static final A07_SerializedSingleton instance = new A07_SerializedSingleton();
 	}
 
-	public static A7_SerializedSingleton getInstance() {
+	public static A07_SerializedSingleton getInstance() {
 		return SingletonHelper.instance;
 	}
 }

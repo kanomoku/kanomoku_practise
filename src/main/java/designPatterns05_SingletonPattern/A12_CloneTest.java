@@ -11,34 +11,28 @@ import java.io.ObjectOutputStream;
 
 import org.junit.jupiter.api.Test;
 
-public class T2_SerializedSingletonTest {
+public class A12_CloneTest {
 
 	@Test
 	public void test1() throws FileNotFoundException, IOException, ClassNotFoundException {
-		A7_SerializedSingleton instanceOne = A7_SerializedSingleton.getInstance();
-		ObjectOutput out = new ObjectOutputStream(new FileOutputStream("filename.ser"));
-		out.writeObject(instanceOne);
-		out.close();
-
-		// deserailize from file to object
-		ObjectInput in = new ObjectInputStream(new FileInputStream("filename.ser"));
-		A7_SerializedSingleton instanceTwo = (A7_SerializedSingleton) in.readObject();
-		in.close();
-
-		System.out.println("instanceOne hashCode=" + instanceOne.hashCode());
-		System.out.println("instanceTwo hashCode=" + instanceTwo.hashCode());
-		System.out.println("---------------------------------------");
+		try {
+		A11_EagerInitializedSingletonClone instanceOne = A11_EagerInitializedSingletonClone.getInstance();
+			A11_EagerInitializedSingletonClone instanceOne2  = instanceOne.clone();
+			System.out.println(instanceOne==instanceOne2);
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
 	}
 	@Test
 	public void test2() throws FileNotFoundException, IOException, ClassNotFoundException {
-		A8_SerializedSingletonReadResolve instanceOne = A8_SerializedSingletonReadResolve.getInstance();
+		A08_SerializedSingletonReadResolve instanceOne = A08_SerializedSingletonReadResolve.getInstance();
 		ObjectOutput out = new ObjectOutputStream(new FileOutputStream("filename.ser"));
 		out.writeObject(instanceOne);
 		out.close();
 
 		// deserailize from file to object
 		ObjectInput in = new ObjectInputStream(new FileInputStream("filename.ser"));
-		A8_SerializedSingletonReadResolve instanceTwo = (A8_SerializedSingletonReadResolve) in.readObject();
+		A08_SerializedSingletonReadResolve instanceTwo = (A08_SerializedSingletonReadResolve) in.readObject();
 		in.close();
 
 		System.out.println("instanceOne hashCode=" + instanceOne.hashCode());
