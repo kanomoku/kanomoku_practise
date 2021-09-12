@@ -1,6 +1,6 @@
 package designPatterns01_FactoryDesignPattern;
 
-public class B14_Main {
+public class B14_AbstractFactoryMainTest {
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Usage: java Main class.name.of.ConcreteFactory");

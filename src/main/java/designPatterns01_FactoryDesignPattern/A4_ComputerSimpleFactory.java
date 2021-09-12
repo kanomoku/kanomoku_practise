@@ -1,6 +1,6 @@
 package designPatterns01_FactoryDesignPattern;
 
-public class A4_ComputerFactory {
+public class A4_ComputerSimpleFactory {
 
 	public static A1_Computer getComputer(String type, String ram, String hdd, String cpu) {
 
