@@ -1,8 +1,8 @@
 package designPatterns18_MediatorDesignPattern;
 
-public class A4_UserImpl extends A1_User {
+public class A02_UserImpl extends A01_User {
 
-	public A4_UserImpl(A2_ChatMediator med, String name) {
+	public A02_UserImpl(A03_ChatMediator med, String name) {
 		super(med, name);
 	}
 

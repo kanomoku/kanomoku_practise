@@ -1,4 +1,4 @@
-package designPatterns5_SingletonPattern;
+package designPatterns05_SingletonPattern;
 
 import java.io.Serializable;
 

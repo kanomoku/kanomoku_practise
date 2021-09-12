@@ -1,10 +1,10 @@
 package designPatterns18_MediatorDesignPattern;
 
-public abstract class A1_User {
-	protected A2_ChatMediator mediator;
+public abstract class A01_User {
+	protected A03_ChatMediator mediator;
 	protected String name;
 	
-	public A1_User(A2_ChatMediator med, String name){
+	public A01_User(A03_ChatMediator med, String name){
 		this.mediator=med;
 		this.name=name;
 	}

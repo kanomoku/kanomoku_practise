@@ -1,4 +1,4 @@
-package designPatterns5_SingletonPattern;
+package designPatterns05_SingletonPattern;
 
 //This is the most widely used approach for Singleton class as it doesn’t require synchronization.
 public class A5_BillPughSingleton {
