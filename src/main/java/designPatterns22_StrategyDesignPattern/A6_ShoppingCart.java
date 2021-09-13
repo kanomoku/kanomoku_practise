@@ -3,11 +3,12 @@ package designPatterns22_StrategyDesignPattern;
 import java.util.ArrayList;
 import java.util.List;
 
-public class A5_ShoppingCart {
+public class A6_ShoppingCart {
 
 	List<A4_Item> items;
+	A5_Context context;
 
-	public A5_ShoppingCart() {
+	public A6_ShoppingCart() {
 		this.items = new ArrayList<A4_Item>();
 	}
 
@@ -27,8 +28,11 @@ public class A5_ShoppingCart {
 		return sum;
 	}
 
-	public void pay(A1_PaymentStrategy paymentMethod) {
-		int amount = calculateTotal();
-		paymentMethod.pay(amount);
+	public void setPaymentStrategy(A1_PaymentStrategy paymentMethod) {
+		context = new A5_Context(paymentMethod);
+	}
+
+	public void pay(int amount) {
+		context.algorithm(amount);
 	}
 }
