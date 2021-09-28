@@ -19,10 +19,10 @@ public class Jvm1_MaxTotalFreeMemory {
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		
 		
-		int a = 0x00000000fec00000;
-		int b = 0x00000000fee10000;
-		System.out.println((b-a)/1024);
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+//		int a = 0x00000000fec00000;
+//		int b = 0x00000000fee10000;
+//		System.out.println((b-a)/1024);
+//		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
 	}
 

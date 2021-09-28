@@ -10,14 +10,11 @@ public class Jvm4_Xss {
 
 //	-Xmx20m -Xms20m -XX:NewRatio=4 -XX:SurvivorRatio=8 -Xss2m -XX:+PrintGCDetails -XX:+UseSerialGC -XX:+PrintCommandLineFlags
 	public static void main(String[] args) {
-		// -Xss1m
-		// -Xss4m
 		try {
 			recursion();
 		} catch (Throwable e) {
 			System.out.println("调用最大深度：" + count);
 			e.printStackTrace();
 		}
-
 	}
 }
