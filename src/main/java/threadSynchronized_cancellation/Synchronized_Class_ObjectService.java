@@ -1,4 +1,4 @@
-package threadSynchronized;
+package threadSynchronized_cancellation;
 
 @SuppressWarnings("all")
 public class Synchronized_Class_ObjectService {

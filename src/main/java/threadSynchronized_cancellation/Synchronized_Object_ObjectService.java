@@ -1,4 +1,4 @@
-package threadSynchronized;
+package threadSynchronized_cancellation;
 
 public class Synchronized_Object_ObjectService {
 	private String uname;

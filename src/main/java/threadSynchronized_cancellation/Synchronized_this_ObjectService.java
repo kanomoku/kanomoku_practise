@@ -1,4 +1,4 @@
-package threadSynchronized;
+package threadSynchronized_cancellation;
 
 //美 [ˈsɪŋkrənaɪzd]  (使) 同步，在时间上一致，同速进行;
 public class Synchronized_this_ObjectService {

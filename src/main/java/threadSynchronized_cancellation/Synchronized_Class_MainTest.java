@@ -1,4 +1,4 @@
-package threadSynchronized;
+package threadSynchronized_cancellation;
 
 public class Synchronized_Class_MainTest {
 	public static void main(String[] args) {

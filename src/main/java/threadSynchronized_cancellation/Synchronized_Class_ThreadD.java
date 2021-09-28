@@ -1,4 +1,4 @@
-package threadSynchronized;
+package threadSynchronized_cancellation;
 
 public class Synchronized_Class_ThreadD extends Thread {
     @Override

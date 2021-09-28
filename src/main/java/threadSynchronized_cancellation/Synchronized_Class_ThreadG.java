@@ -1,4 +1,4 @@
-package threadSynchronized;
+package threadSynchronized_cancellation;
 
 public class Synchronized_Class_ThreadG extends Thread {
     private Synchronized_Class_ObjectService objectService;

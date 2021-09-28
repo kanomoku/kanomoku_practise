@@ -1,4 +1,4 @@
-package threadSynchronized;
+package threadSynchronized_cancellation;
 
 
 public class Synchronized_this_ThreadD extends Thread {
