@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class A09_SerializedSingletonTest {
 
