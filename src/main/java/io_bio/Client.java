@@ -17,7 +17,7 @@ public class Client {
             port = Integer.parseInt(args[1]);
         } else {
             host = "127.0.0.1";
-            port = 9999;
+            port = 9998;
         }
 
         Socket socket = null;

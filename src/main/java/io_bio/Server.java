@@ -10,7 +10,7 @@ public class Server {
     public static void main(String[] args) {
 
         // 模拟获取端口号
-        int port = args.length > 0 ? Integer.parseInt(args[0]) : 9999;
+        int port = args.length > 0 ? Integer.parseInt(args[0]) : 9998;
 
         ServerSocket serverSocket = null;
 
@@ -55,6 +55,7 @@ public class Server {
                 // 用sorket建立两个读写流
                 reader = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
                 writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8));
+
 
                 String readMessage = null;
                 while (true) {
