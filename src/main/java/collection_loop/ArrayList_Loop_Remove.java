@@ -1,5 +1,7 @@
 package collection_loop;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -38,8 +40,35 @@ public class ArrayList_Loop_Remove {
 		streamForEachTest(list);
 		System.out.println("======== 6 parallelStream  java8 ==========");
 
-	}
 
+
+	}
+	@Test()
+	public void removeTest() {
+		List<Integer> list1 = new ArrayList<>();
+		list1.add(1);
+		list1.add(2);
+		list1.add(3);
+		list1.add(4);
+		list1.add(5);
+		list1.add(6);
+		System.out.println(list1);
+		forEachTest(list1);
+		System.out.println(list1);
+	}
+	@Test()
+	public void removeTest2() {
+		List<Integer> list1 = new ArrayList<>();
+		list1.add(1);
+		list1.add(2);
+		list1.add(3);
+		list1.add(4);
+		list1.add(5);
+		list1.add(6);
+		System.out.println(list1);
+		streamForEachTest(list1);
+		System.out.println(list1);
+	}
 	// fori循环遍历
 	// 这种方式的问题在于，删除某个元素后，list的大小发生了变化，而你的索引也在变化，所以会导致你在遍历的时候漏掉某些元素。
 	// 这种方式可以用在删除特定的一个元素时使用，但不适合循环删除多个元素时使用
