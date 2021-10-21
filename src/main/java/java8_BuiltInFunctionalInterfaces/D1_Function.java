@@ -1,4 +1,4 @@
-package BuiltInFunctionalInterfaces;
+package java8_BuiltInFunctionalInterfaces;
 
 import java.util.Map;
 import java.util.function.Function;

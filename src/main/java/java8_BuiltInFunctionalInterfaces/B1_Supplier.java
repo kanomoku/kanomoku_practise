@@ -1,8 +1,7 @@
-package BuiltInFunctionalInterfaces;
+package java8_BuiltInFunctionalInterfaces;
 
 import java.util.Optional;
 import java.util.Random;
-import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 

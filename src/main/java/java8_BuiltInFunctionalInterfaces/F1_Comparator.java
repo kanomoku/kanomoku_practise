@@ -1,11 +1,8 @@
-package BuiltInFunctionalInterfaces;
+package java8_BuiltInFunctionalInterfaces;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
-
-import collection_loop.ArrayList_Loop_Remove;
 
 public class F1_Comparator {
 

@@ -1,4 +1,4 @@
-package BuiltInFunctionalInterfaces;
+package java8_BuiltInFunctionalInterfaces;
 
 import java.util.Arrays;
 import java.util.List;
