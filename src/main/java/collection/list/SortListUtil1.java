@@ -1,4 +1,4 @@
-package collection_list;
+package collection.list;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
