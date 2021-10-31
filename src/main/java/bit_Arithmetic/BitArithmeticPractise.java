@@ -29,5 +29,16 @@ public class BitArithmeticPractise {
         System.out.println((5 ^ (5 >> 31)) - (5 >> 31));// 5
         System.out.println((6 ^ (6 >> 31)) - (6 >> 31));// 6
         System.out.println((7 ^ (7 >> 31)) - (7 >> 31));// 7
+
+        //找出没有重复的数
+        int[] s5 = new int[] { 4, 4, 2, 3, 3 };
+        System.out.println(find(s5));
+    }
+    public static int find(int[] arr){
+        int tmp = arr[0];
+        for(int i = 1;i < arr.length; i++)
+            tmp ^= arr[i];
+
+        return tmp;
     }
 }
