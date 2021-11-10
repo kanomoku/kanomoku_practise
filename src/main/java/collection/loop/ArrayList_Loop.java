@@ -14,10 +14,12 @@ public class ArrayList_Loop {
         List<Integer> list = fillNumber();
         foriTest(list);
         forBoostTest(list);
-        iteratorTest(list);
+        forIteratorTest(list);
+        whileIteratorTest(list);
         forEachTest(list);
         streamForEachTest(list);
         parallelStreamForEachTest(list);
+
     }
 
     private static List<Integer> fillNumber() {
@@ -30,8 +32,11 @@ public class ArrayList_Loop {
         return list;
     }
 
-    // 1.fori循环遍历
-    // 效率最高 也是java官方推荐的用法
+    /**
+     * fori循环
+     *
+     * 效率最高 也是java官方推荐的用法
+     */
     @Test()
     public static void foriTest(List<Integer> list) {
         long before = System.currentTimeMillis();
@@ -42,7 +47,9 @@ public class ArrayList_Loop {
         System.out.println("for i time=\t" + (after - before));
     }
 
-    // 2.增强for循环
+    /**
+     * 增强for循环
+     */
     @Test()
     public static void forBoostTest(List<Integer> list) {
         long before = System.currentTimeMillis();
@@ -53,28 +60,38 @@ public class ArrayList_Loop {
         System.out.println("for Boost time=\t" + (after - before));
     }
 
-    // 3.iterator 迭代器
+    /**
+     * iterator迭代器
+     */
     @Test()
-    public static void iteratorTest(List<Integer> list) {
+    public static void forIteratorTest(List<Integer> list) {
         long before = System.currentTimeMillis();
         for (Iterator<Integer> iterator = list.iterator(); iterator.hasNext();) {
             Integer a = (Integer)iterator.next();
         }
         long after = System.currentTimeMillis();
         System.out.println("iterator for time=\t" + (after - before));
-
-        before = System.currentTimeMillis();
+    }
+    /**
+     * iterator迭代器
+     */
+    @Test()
+    public static void whileIteratorTest(List<Integer> list) {
+        long before = System.currentTimeMillis();
         // while 循环写法
         Iterator<Integer> iterator = list.iterator();
         while (iterator.hasNext()) {
             Integer a = (Integer)iterator.next();
         }
-        after = System.currentTimeMillis();
+        long after = System.currentTimeMillis();
         System.out.println("iterator while time=\t" + (after - before));
     }
 
-    // 4.lambda
-    // lambda 最慢不推荐 java8 lambda
+    /**
+     * lambda
+     *
+     * 最慢 不推荐
+     */
     @Test()
     public static void forEachTest(List<Integer> list) {
         long before = System.currentTimeMillis();
@@ -85,7 +102,11 @@ public class ArrayList_Loop {
         System.out.println("lambda time=\t" + (after - before));
     }
 
-    // 5.stream foreach java8 特有
+    /**
+     * stream foreach
+     *
+     * java8特有
+     */
     @Test()
     public static void streamForEachTest(List<Integer> list) {
         long before = System.currentTimeMillis();
@@ -96,7 +117,12 @@ public class ArrayList_Loop {
         System.out.println("list.stream().forEach time=\t" + (after - before));
     }
 
-    // 6.parallelStream foreach java8 特有
+    /**
+     * parallelStream foreach
+     *
+     * java8特有
+     */
+    //
     @Test()
     public static void parallelStreamForEachTest(List<Integer> list) {
         long before = System.currentTimeMillis();
