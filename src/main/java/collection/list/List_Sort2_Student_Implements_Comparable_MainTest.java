@@ -1,12 +1,17 @@
 package collection.list;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+@Slf4j
 public class List_Sort2_Student_Implements_Comparable_MainTest {
     public static void main(String[] args) {
         List<Student_Implements_Comparable> comparableList = new ArrayList<>();
@@ -84,42 +89,13 @@ public class List_Sort2_Student_Implements_Comparable_MainTest {
 }
 
 @Data
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
+@AllArgsConstructor
 class Student_Implements_Comparable implements Comparable<Student_Implements_Comparable> {
-    private Integer age;
     private Integer score;
+    private Integer age;
     private String name;
 
-    public Student_Implements_Comparable() {}
-
-    public Student_Implements_Comparable(Integer age, Integer score, String name) {
-        this.age = age;
-        this.score = score;
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public Integer getScore() {
-        return score;
-    }
-
-    public void setScore(Integer score) {
-        this.score = score;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public int compareTo(Student_Implements_Comparable o) {
@@ -134,10 +110,5 @@ class Student_Implements_Comparable implements Comparable<Student_Implements_Com
             }
         }
         return i;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" + "age=" + age + ", score=" + score + ", name='" + name + '\'' + '}';
     }
 }
